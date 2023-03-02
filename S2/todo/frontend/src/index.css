@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+ box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(36, 10, 59);
+  padding: 40px 20px;
+}
+
+.container{
+  width: 400px;
+  /* border: 1px solid white; */
+  padding: 20px;
+  margin: 0 auto;
+}
+.input{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.input > *{
+  /* margin: 0 10px; */
+  padding: 6px 10px;
+  border: none;
+  font-size: 17px;
+  outline: 0;
+}
+.input > button{
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+background-color: white;
+}
+.input > button:active{
+  transform: scale(.98);
+}
+.input > input{
+  width: 300px;
+  margin-right: 10px;
+}
+.items{
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 17px;
+  font-weight: bolder;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+.todo_item{
+  max-height: 400px;
+  overflow-y: auto;
+}
+.todo_item::-webkit-scrollbar{
+  width: 0;
+}
+.todo_item{
+  width: 100%;
+  /* border: 1px solid white; */
+}
+.items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons > *{
+margin-left: 10px;
+padding: 2px;
+border: none;
+background-color: transparent;
+}
+.buttons > button > i{
+  font-size: 17px;
+  cursor: pointer;
+}
+.edit{
+  color: green;
+}
+.delete{
+  color: red;
+}
