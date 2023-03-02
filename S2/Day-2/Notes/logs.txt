@@ -1,0 +1,11 @@
+Method:GET Route: /data 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
+Method:POST Route: /newstudent 
