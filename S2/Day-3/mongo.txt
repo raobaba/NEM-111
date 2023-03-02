@@ -1,0 +1,239 @@
+BASIC COMMANDS:
+1. show dbs
+2. use “database_name” ⇒ you can create a database with this as well
+3. show collections
+4. db.”collection_name”.find()
+5. cls ⇒ to clear the shell
+6. db.createCollection(”collection_name”)
+7. db.”collection_name”.insertOne({})
+8. db.”collection_name”.insertMany({},{})
+
+test> show dbs
+Advance      128.00 KiB
+Masai          8.00 KiB
+admin         40.00 KiB
+b21          108.00 KiB
+config        60.00 KiB
+jwteval       40.00 KiB
+local         80.00 KiB
+masa          12.00 KiB
+masaischool  108.00 KiB
+mongo          1.57 MiB
+nxm           48.00 KiB
+rajan         60.00 KiB
+test          12.00 KiB
+test> use b21
+switched to db b21
+b21> db.collection.drop()
+false
+b21> show dbs
+Advance      128.00 KiB
+Masai          8.00 KiB
+admin         40.00 KiB
+b21          108.00 KiB
+config        60.00 KiB
+jwteval       40.00 KiB
+local         80.00 KiB
+masa          12.00 KiB
+masaischool  108.00 KiB
+mongo          1.57 MiB
+nxm           48.00 KiB
+rajan         60.00 KiB
+test          12.00 KiB
+b21> use 21
+switched to db 21
+21> use b21
+switched to db b21
+b21> db.collection.remove()
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+MongoshInvalidInputError: [COMMON-10001] Missing required argument at position 0 (Collection.remove)
+b21> db.rajan.drop)(
+Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 | db.rajan.drop)(
+    |              ^
+  2 |
+
+b21> db.rajan.drop()
+false
+b21> show dbs
+Advance      128.00 KiB
+Masai          8.00 KiB
+admin         40.00 KiB
+b21          108.00 KiB
+config        60.00 KiB
+jwteval       40.00 KiB
+local         80.00 KiB
+masa          12.00 KiB
+masaischool  108.00 KiB
+mongo          1.57 MiB
+nxm           48.00 KiB
+rajan         60.00 KiB
+test          12.00 KiB
+b21> show collections
+users
+b21> db.dropDatabase()
+{ ok: 1, dropped: 'b21' }
+b21> show bds
+MongoshInvalidInputError: [COMMON-10001] 'bds' is not a valid argument for "show".
+b21> show dbs
+Advance      128.00 KiB
+Masai          8.00 KiB
+admin         40.00 KiB
+config        60.00 KiB
+jwteval       40.00 KiB
+local         80.00 KiB
+masa          12.00 KiB
+masaischool  108.00 KiB
+mongo          1.57 MiB
+nxm           48.00 KiB
+rajan         60.00 KiB
+test          12.00 KiB
+b21> use masa
+switched to db masa
+masa> db.dropDatabase()
+{ ok: 1, dropped: 'masa' }
+masa> use rajan
+switched to db rajan
+rajan> db.dropDatabase()
+{ ok: 1, dropped: 'rajan' }
+rajan> show dbs
+Advance      128.00 KiB
+Masai          8.00 KiB
+admin         40.00 KiB
+config        72.00 KiB
+jwteval       40.00 KiB
+local         80.00 KiB
+masaischool  108.00 KiB
+mongo          1.57 MiB
+nxm           48.00 KiB
+test          12.00 KiB
+rajan> use Advance
+switched to db Advance
+Advance> db.dropDatabase()
+{ ok: 1, dropped: 'Advance' }
+Advance> use mongo
+switched to db mongo
+mongo> db.dropDatabase()
+{ ok: 1, dropped: 'mongo' }
+mongo> show dbs
+Masai          8.00 KiB
+admin         40.00 KiB
+config        72.00 KiB
+jwteval       40.00 KiB
+local         80.00 KiB
+masaischool  108.00 KiB
+nxm           48.00 KiB
+test          12.00 KiB
+mongo> use jwteval
+switched to db jwteval
+jwteval> db.dropDatabase()
+{ ok: 1, dropped: 'jwteval' }
+jwteval> use masaischool
+switched to db masaischool
+masaischool> db.dropDatabase()
+{ ok: 1, dropped: 'masaischool' }
+masaischool> show dbs
+Masai    8.00 KiB
+admin   40.00 KiB
+config  72.00 KiB
+local   80.00 KiB
+nxm     48.00 KiB
+test    12.00 KiB
+masaischool> use Masai
+switched to db Masai
+Masai> show collections
+UserData
+Masai> db.UserData.find().pretty()
+
+Masai> db.UserData.find()
+
+Masai> db.dropDatabase()
+{ ok: 1, dropped: 'Masai' }
+Masai> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   80.00 KiB
+nxm     48.00 KiB
+test    12.00 KiB
+Masai> use test
+switched to db test
+test> show collections
+users
+test> db.users.find()
+
+test> db.dropDatabase()
+{ ok: 1, dropped: 'test' }
+test> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   80.00 KiB
+nxm     48.00 KiB
+test> use nxm
+switched to db nxm
+nxm> show collections
+heroes
+heros
+nxm> db.heroes.find()
+[
+  {
+    _id: ObjectId("63af13116fb061c0004bea0f"),
+    name: 'IronMan',
+    powers: [ 'robot', 'money' ],
+    health: 33,
+    villains: [
+      { name: 'Mandarin', health: 50 },
+      { name: 'Titanium Man', health: 54 }
+    ],
+    metadata: { favouriteColor: 'red', age: 13 }
+  },
+  {
+    _id: ObjectId("63af13116fb061c0004bea10"),
+    name: 'Batman',
+    powers: [ 'intelligence', 'money' ],
+    health: 40,
+    villains: [
+      { name: 'TwoFace', health: 20 },
+      { name: 'Redhood', health: 65 }
+    ],
+    metadata: { favouriteColor: 'blue', age: 44 }
+  },
+  {
+    _id: ObjectId("63af13116fb061c0004bea11"),
+    name: 'Spider-Man',
+    powers: [ 'intelligence' ],
+    health: 60,
+    villains: [
+      { name: 'Venom', health: 65 },
+      { name: 'Dr. Octavio', health: 76 }
+    ],
+    metadata: { favouriteColor: 'red', age: 44 }
+  },
+  {
+    _id: ObjectId("63af13116fb061c0004bea12"),
+    name: 'Thor',
+    powers: [ 'god', 'magic' ],
+    health: 57,
+    villains: [ { name: 'Surtur', health: 50 }, { name: 'Hela', health: 87 } ],
+    metadata: { favouriteColor: 'yello', age: 313 }
+  },
+  {
+    _id: ObjectId("63af13116fb061c0004bea13"),
+    name: 'Dr. Strange',
+    powers: [ 'magic' ],
+    health: 86,
+    villains: [ { name: 'Hela', health: 87 }, { name: 'Dormamu', health: 100 } ],
+    metadata: { favouriteColor: 'orange', age: 44 }
+  }
+]
+nxm> show collections
+heroes
+heros
+nxm> db.heros.find()
+
+nxm> db.heros.drop()
+true
+nxm> show collections
+heroes
+nxm>
