@@ -1,0 +1,26 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "footbal",
+            "content": "playground",
+            "author": "sonu"
+        },
+        {
+            "id": 2,
+            "name": "KGF chapter 2",
+            "rating": 10,
+            "description": "Powerful people come from powerful places",
+            "genre": "Action ",
+            "caste": "Rocky bhai"
+        },
+        {
+            "id": 4,
+            "name": "KGF Chapter 2",
+            "rating": 10,
+            "description": "Power full",
+            "genre": "Action, crime , thrill",
+            "caste": "rocking star YASH"
+        }
+    ]
+}
