@@ -1,0 +1,9 @@
+1. db.data.find({gender:"Male"})
+2. db.data.find({id:{$mod:[2,0]}})
+3. db.data.find({native:"Japan"})
+4. db.data.find({gender:"Female",native:"India"})
+5. db.data.find({age:{$gt:25}})
+6. db.data.find({$and:[{age:{$lt:50}},{native:"United States"}]}
+7. db.data.countDocuments({relocate_to:"France"})
+8. db.data.countDocuments({native:"United States",relocate_to:"Russia"})/db.data.find({native:"United States",relocate_to:"Russia"}).sort({age:-1})
+9. db.data.find().sort([{family_members:1},{age:-1}])
