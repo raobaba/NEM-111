@@ -1,0 +1,133 @@
+
+Relationships: The link/bond between two things
+
+Thing: people, objects, network, computers
+
+        ==> Databse
+          ==> Collections ==> Multiple collections ==> emp, hr, marketing, collection  
+            ==> Documents
+
+In our case we are going to study about the link/bond (Relationship) between different collections of a datrabase
+
+Type of Relationships
+    1. 1 - 1 Relationship ==> 1 - 1
+    2. 1 - Many Relationship ==> Many - 1
+    3. Many - Many ==> Many - Many
+
+WHY DO WE NEED RELATIONSHIPS?
+    Masai School's Example
+        1. students
+        2. instructors
+
+    *Students Collection* ==> Documents
+    batch
+    student_code
+
+    *Instructors Collection* ==> Documents
+    emp_code
+    sub
+    exp
+
+    *users collections*
+    name
+    email
+    gender
+    city
+    blood group
+    phone number
+
+    Example of Queries.
+
+    db.students.find({city:"BLR"}) ==> Students details from Bangalore
+    db.instructors.find({city:"BLR"}) ==> Instructor details from Bangalore
+    db.operations.find({city:"BLR"})
+    db.marketing.find({city:"BLR"})
+    db.sales.find({city:"BLR"})
+
+
+1-1 Relationsip
+
+    *Students Collection* ==> Documents
+        _id:"-------"
+        batch
+        student_code
+
+    *users collections*
+        _id:"------"
+        name
+        email
+        gender
+        city
+        blood group
+        phone number
+
+    1st Way: Put the user id in student's schema
+    2nd Way: Put the student id in user's schema
+
+
+1 - Many Relationship
+
+    Linkedin:
+        ==> Posts
+        ==> Comments 
+
+
+    posts=[
+        {
+            post_id:1
+            title:"Post 1"
+            body:"Post 1 Body"
+            no_of_likes:100
+            no_of_reactions:100
+            comments:[1,2,3,4,5]
+        },
+        {
+            post_id:2
+            title:"Post 2"
+            body:"Post 2 Body"
+            no_of_likes:200
+            no_of_reactions:200
+            comments:[45,67,34,44]
+        },
+        {
+            post_id:3
+            title:"Post 3"
+            body:"Post 3 Body"
+            no_of_likes:200
+            no_of_reactions:200
+            comments:[33,65,78,12]
+        },
+        10000
+    ]
+    db.posts.find()
+
+    1st Way: Put the Post id in comments schema ==> Many to 1
+    2nd Way: Put comments id in posts schema ==> 1 to Many
+
+
+Many - Many Relationship
+
+    Questions==>How to program a server?  ==> server , nodejs, java, go, http, backend
+
+    ==> One tag cab be used for multiple questions.
+    ==> One questions can have multiple tags
+
+
+what is the best way to connect the collections?
+
+    ==> finding out which one is Dependent Collection and which one is Independent Collection. 
+
+    1 - 1
+    ==> Dependent => Students
+    ==> Independent => users
+
+    ==> BEST WAY => USER ID IS GOING TO BE PRESENT IN STUDENT'S SCHEMA
+
+    1 - Many 
+    ==> Dependent => Comments
+    ==> Independent => Posts
+
+    ==> BEST WAY => POST ID IS GOING TO BE PRESENT IN COMMENT'S SCHEMA
+
+    Conclusion
+    ==> PUT THE INDEPENDENT'S ID INSIDE DEPENDENT COLLECTION  (PARENT'S ID INSIDE CHILD COLLECTION)
