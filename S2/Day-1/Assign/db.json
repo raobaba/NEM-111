@@ -1,0 +1,26 @@
+{
+    "student": [
+        {
+            "name": "Rajan",
+            "city": "siwan"
+        },
+        {
+            "name": "dhanjee",
+            "city": "patna"
+        },
+        {
+            "name": "anish",
+            "city": "mairwa"
+        },
+        {
+            "name": "anish",
+            "city": "mairwa"
+        },
+        {
+            "name": "Rajan Kumar",
+            "age": "23",
+            "hobby": "singing",
+            "city": "Siwan"
+        }
+    ]
+}
