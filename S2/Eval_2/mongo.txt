@@ -1,0 +1,5 @@
+1. db.users.find({gender:"Male",isMarried:false})
+2. db.users.find({gender:"Female",percentage:{$gt:80}})
+3. db.users.find({percentage:{$gte:50}})
+4. db.users.updateMany({gender:"Female",scholarship:true})
+5. db.users.deleteMany({percentage:{$lt:40}})

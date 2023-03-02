@@ -1,0 +1,1 @@
+Method:-DELETE, Route:-/students/5?role=admin&pass=7877, user-agent:-Thunder Client (https://www.thunderclient.com)
